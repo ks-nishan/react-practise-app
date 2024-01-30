@@ -5,6 +5,7 @@ import About from "./components/about";
 import Dashboard from "./components/dashboard";
 
 function App() {
+  const greeting = {text: "Welcome", color: "red"};
   return (
     <div className="App">
       <p>
@@ -19,7 +20,7 @@ function App() {
       <hr></hr>
       <BrowserRouter>
         <Routes>
-          <Route exact path="/home" element={<Home />} />
+          <Route exact path="/home" element={<Home greeting={greeting}/>} />
           <Route exact path="/about" element={<About />} />
           <Route exact path="/dashboard" element={<Dashboard />} />
         </Routes>
