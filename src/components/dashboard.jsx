@@ -11,10 +11,13 @@ function Dashboard() {
       <pre>{JSON.stringify(user)}</pre>
       <button
         onClick={() => {
-          setUser({});
+          setUser({
+            name : 'Nishanthan',
+            role : 'Admin'
+          });
         }}
       >
-        Logout
+        Login
       </button>
     </div>
   );
