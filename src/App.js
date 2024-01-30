@@ -6,6 +6,7 @@ import Dashboard from "./components/dashboard";
 
 function App() {
   const greeting = {text: "Welcome", color: "red"};
+  const user = "Nishan";
   return (
     <div className="App">
       <p>
@@ -20,8 +21,8 @@ function App() {
       <hr></hr>
       <BrowserRouter>
         <Routes>
-          <Route exact path="/home" element={<Home greeting={greeting}/>} />
-          <Route exact path="/about" element={<About />} />
+          <Route exact path="/home" element={<Home greeting={greeting} user={user}/>} />
+          <Route exact path="/about" element={<About> <p>This is a paragraph tag passed as a props from App</p> </About>} /> {/*passing the html tag as props*/}
           <Route exact path="/dashboard" element={<Dashboard />} />
         </Routes>
       </BrowserRouter>

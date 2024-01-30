@@ -1,9 +1,10 @@
 import React from "react";
 
-function About() {
+const About = (props) => {
   return (
     <div>
       <h1>About</h1>
+      {props.children}
     </div>
   );
 }
